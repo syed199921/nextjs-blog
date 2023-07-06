@@ -1,9 +1,14 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import Layout from '../components/layout'
+
 
 export default function Home() {
   return (
+    
     <div className={styles.container}>
+     
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -11,7 +16,7 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Learn <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
@@ -23,6 +28,11 @@ export default function Home() {
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
+          {/* This is a link to the first post page */}
+          <Link href='/posts' className={styles.card}>
+            <h3>To First Post!</h3>
+            <p>This is a link to the first post page</p>
+          </Link>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h3>Learn &rarr;</h3>
@@ -110,6 +120,8 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
+      
     </div>
+  
   )
 }

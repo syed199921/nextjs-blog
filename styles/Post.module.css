@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.link{
+    display: block;
+    margin-top: 20px;
+    color: white;
+    background-color: blue;
+}
